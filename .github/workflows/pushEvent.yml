@@ -1,8 +1,6 @@
-name: Trigger on Push
+name: Trigger on Pull Request
 on:
-  push:
-    branches:
-      - master
+  pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,4 +8,4 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: Run a script
-        run: echo "Hello, world!"
+        run: echo "Hello, pull request!"
