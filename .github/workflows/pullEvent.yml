@@ -1,0 +1,11 @@
+name: Trigger on Pull Request
+on:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "Hello, pull request!"
